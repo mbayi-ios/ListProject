@@ -8,17 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		8989BDCB28F3272300A770B4 /* ListTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989BDCA28F3272300A770B4 /* ListTestApp.swift */; };
-		8989BDCD28F3272300A770B4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989BDCC28F3272300A770B4 /* ContentView.swift */; };
+		8989BDCD28F3272300A770B4 /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989BDCC28F3272300A770B4 /* TodoListView.swift */; };
 		8989BDCF28F3272500A770B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8989BDCE28F3272500A770B4 /* Assets.xcassets */; };
 		8989BDD228F3272500A770B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8989BDD128F3272500A770B4 /* Preview Assets.xcassets */; };
+		8989BDDC28F3322000A770B4 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989BDDB28F3322000A770B4 /* Item.swift */; };
+		8989BDDE28F3325100A770B4 /* TodoListManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8989BDDD28F3325100A770B4 /* TodoListManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8989BDC728F3272300A770B4 /* ListTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8989BDCA28F3272300A770B4 /* ListTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTestApp.swift; sourceTree = "<group>"; };
-		8989BDCC28F3272300A770B4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		8989BDCC28F3272300A770B4 /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
 		8989BDCE28F3272500A770B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8989BDD128F3272500A770B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8989BDDB28F3322000A770B4 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		8989BDDD28F3325100A770B4 /* TodoListManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +55,10 @@
 		8989BDC928F3272300A770B4 /* ListTest */ = {
 			isa = PBXGroup;
 			children = (
+				8989BDDA28F331FB00A770B4 /* Model */,
+				8989BDD928F331F400A770B4 /* View Model */,
+				8989BDD828F331EB00A770B4 /* Views */,
 				8989BDCA28F3272300A770B4 /* ListTestApp.swift */,
-				8989BDCC28F3272300A770B4 /* ContentView.swift */,
 				8989BDCE28F3272500A770B4 /* Assets.xcassets */,
 				8989BDD028F3272500A770B4 /* Preview Content */,
 			);
@@ -65,6 +71,30 @@
 				8989BDD128F3272500A770B4 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8989BDD828F331EB00A770B4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8989BDCC28F3272300A770B4 /* TodoListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8989BDD928F331F400A770B4 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				8989BDDD28F3325100A770B4 /* TodoListManager.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		8989BDDA28F331FB00A770B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8989BDDB28F3322000A770B4 /* Item.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +167,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8989BDCD28F3272300A770B4 /* ContentView.swift in Sources */,
+				8989BDCD28F3272300A770B4 /* TodoListView.swift in Sources */,
+				8989BDDE28F3325100A770B4 /* TodoListManager.swift in Sources */,
+				8989BDDC28F3322000A770B4 /* Item.swift in Sources */,
 				8989BDCB28F3272300A770B4 /* ListTestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
