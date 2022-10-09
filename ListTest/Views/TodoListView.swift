@@ -14,6 +14,7 @@ struct TodoListView: View {
 
     var body: some View {
         NavigationView {
+            ZStack {
             List {
                 ForEach(todoListManager.items) { item in
                     NavigationLink(destination: Text("Destination \(item.name)"), label: {
@@ -27,6 +28,13 @@ struct TodoListView: View {
                     todoListManager.move(indices: indices, newOffset: newOffset)
                 })
             }
+                if todoListManager.items.count == 0 {
+                    Text("Please start by adding items")
+                        .foregroundColor(.gray)
+                }
+            }
+
+
             .navigationBarTitle(Text("Todo's"), displayMode: .large)
             .toolbar(content: {
                 ToolbarItemGroup(placement: .navigationBarTrailing) {
@@ -45,6 +53,11 @@ struct TodoListView: View {
 
 struct TodoListView_Previews: PreviewProvider {
     static var previews: some View {
-        TodoListView(todoListManager: TodoListManager())
+        Group {
+            TodoListView(todoListManager: TodoListManager.emptyState())
+                .previewDisplayName("empty state")
+            TodoListView(todoListManager: TodoListManager.fullState())
+                .previewDisplayName("data exists")
+        }
     }
 }
